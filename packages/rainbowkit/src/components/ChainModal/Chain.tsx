@@ -1,6 +1,5 @@
 import React, { Fragment, useContext } from 'react';
 import type { useSwitchChain } from 'wagmi';
-import { isMobile } from '../../utils/isMobile';
 import { AsyncImage } from '../AsyncImage/AsyncImage';
 import type { AsyncImageSrc } from '../AsyncImage/useAsyncImage';
 import { Box, type BoxProps } from '../Box/Box';
@@ -32,7 +31,7 @@ const Chain = ({
   iconBackground,
   idx,
 }: ChainProps) => {
-  const mobile = isMobile();
+  const mobile = false; // Always display desktop compact mode
   const { i18n } = useContext(I18nContext);
   const rainbowkitChains = useRainbowKitChains();
 

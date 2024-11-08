@@ -203,9 +203,7 @@ export function ConnectButton({
                     )}
                     <Box
                       background={
-                        normalizeResponsiveValue(showBalance)[
-                          isMobile() ? 'smallScreen' : 'largeScreen'
-                        ]
+                        normalizeResponsiveValue(showBalance)['largeScreen']
                           ? 'connectButtonInnerBackground'
                           : 'connectButtonBackground'
                       }

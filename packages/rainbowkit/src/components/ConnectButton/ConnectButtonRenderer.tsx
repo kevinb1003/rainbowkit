@@ -90,9 +90,7 @@ export function ConnectButtonRenderer({
     }
 
     if (showBalance) {
-      return normalizeResponsiveValue(showBalance)[
-        isMobile() ? 'smallScreen' : 'largeScreen'
-      ];
+      return normalizeResponsiveValue(showBalance)['largeScreen'];
     }
 
     return true;

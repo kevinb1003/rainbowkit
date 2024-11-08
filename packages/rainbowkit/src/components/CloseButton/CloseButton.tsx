@@ -1,6 +1,5 @@
 import React from 'react';
 import { touchableStyles } from '../../css/touchableStyles';
-import { isMobile } from '../../utils/isMobile';
 import { Box } from '../Box/Box';
 import { CloseIcon } from '../Icons/Close';
 
@@ -11,7 +10,7 @@ export const CloseButton = ({
   'aria-label'?: string;
   onClose: () => void;
 }) => {
-  const mobile = isMobile();
+  const mobile = false; // Always display desktop compact mode
   return (
     <Box
       alignItems="center"

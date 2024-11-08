@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useAccount, useDisconnect, useSwitchChain } from 'wagmi';
 import { useConfig } from 'wagmi';
-import { isMobile } from '../../utils/isMobile';
 import { Box } from '../Box/Box';
 import { CloseButton } from '../CloseButton/CloseButton';
 import { Dialog } from '../Dialog/Dialog';
@@ -47,7 +46,7 @@ export function ChainModal({ onClose, open }: ChainModalProps) {
 
   const { disconnect } = useDisconnect();
   const titleId = 'rk_chain_modal_title';
-  const mobile = isMobile();
+  const mobile = false; // Always display desktop compact mode
   const isCurrentChainSupported = chains.some((chain) => chain.id === chainId);
   const chainIconSize = mobile ? '36' : '28';
   const rainbowkitChains = useRainbowKitChains();

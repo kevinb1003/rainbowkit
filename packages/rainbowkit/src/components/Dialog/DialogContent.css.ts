@@ -16,14 +16,7 @@ export const dialogContent = style([
     position: 'relative',
   }),
   {
-    '@media': {
-      [`screen and (min-width: ${largeScreenMinWidth}px)`]: {
-        width: '360px',
-      },
-    },
     'boxSizing': 'content-box',
-    'maxWidth': '100vw',
-    'width': '360px',
   },
 ]);
 
@@ -50,16 +43,8 @@ export const dialogContentWideDesktop = style([
 export const dialogContentCompactMode = style([
   dialogContent,
   {
-    minWidth: '368px',
-    width: '368px',
-  },
-  {
-    '@media': {
-      [`screen and (min-width: ${largeScreenMinWidth}px)`]: {
-        minWidth: '368px',
-        width: '368px',
-      },
-    },
+    maxWidth: '360px',
+    width: '100vw',
   },
 ]);
 

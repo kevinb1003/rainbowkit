@@ -24,7 +24,7 @@ export function DialogContent({
   paddingBottom,
   wide = false,
 }: DialogContentProps) {
-  const mobile = isMobile();
+  const mobile = false; // Always display desktop compact mode
   const modalSize = useContext(ModalSizeContext);
   const compactModeEnabled = modalSize === ModalSizeOptions.COMPACT;
   return (

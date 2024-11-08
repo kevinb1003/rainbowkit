@@ -1,6 +1,5 @@
 import React from 'react';
 import { touchableStyles } from '../../css/touchableStyles';
-import { isMobile } from '../../utils/isMobile';
 import { Box, type BoxProps } from '../Box/Box';
 import { Text, type TextProps } from '../Text/Text';
 
@@ -56,7 +55,7 @@ export function ActionButton({
 }) {
   const isPrimary = type === 'primary';
   const isNotLarge = size !== 'large';
-  const mobile = isMobile();
+  const mobile = false; // Always display desktop compact mode
   const background = !disabled
     ? isPrimary
       ? 'accentColor'
